@@ -1,5 +1,4 @@
 # QuizApp
-#Application console Python permettant #une interaction entre un utilisateur #à travers des questions sous #plusieurs formats dans un domaine #spécifique
 
 **Objectif :** Concevoir une application de Quiz dynamique et pédagogique.
 

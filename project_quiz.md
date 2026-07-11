@@ -12,69 +12,68 @@ il faudrait afficher à la fin le récaptulatif : Toutes les questions et les r�
 
 ## Types de données
 
--liste des domaines disponibles: Domainnes_quiz = ["Mathématiques", "Statistiques", "Programmation_Python", "Culture générale"]
--identifiant de l'utilisateur : str
--questions pour chaque domaine choisir : representer par des dictionnaires.
+- liste des domaines disponibles: Domainnes_quiz = ["Mathématiques", "Statistiques", "Programmation_Python", "Culture générale"]
+- identifiant de l'utilisateur : str
+- questions pour chaque domaine choisir : representer par des dictionnaires.
 
 ## Déroulement
 
--demande l'identifiant du joueur
--afficher les dommaines de quiz
--demander le domaine que le joueur veut choisir
-    -Afficher la première question du domaine X choisi
-    -Permettre à l'utilisateur de saisir son choix
-    -Demande à l'utilisateur si il veut saisir encore une autre réponse 
-       -si oui on lui redonne la main de saisir 
-       -si non
-    -On affiche à l'écran deux textes
-       -aller à la question précédente en tapant 0 
-         --on lui donne la main et il tape 0
-       -aller à la question suivante en tapant 1
-         --on lui donne la main et il tape 1
-    --Afficher la question 2 du domaine X maintenant que la personne à taper 1
-    -le joueur saisir son choix pour chacune des question
-    TANT QUE LES QUESTIONS DU DOMAINE RESTE ON REFAIT LA MEME PROCEDURE
-    -On montre le récaputulatif des questions et réponses du joueur
-    -Demander si il veut Envoyer ses réponses 
-    -Afficher son score avec une mention
-    -Afficher la correction des questions qu'il a perdu
-    -Aficher Parti terminer
-    -Demander si il veut rejouer une aute partie
-    -TANT QU'IL DIT OUI ON RECOMMENCE A PARTI DE DOMAINE QUIZ
-    -
+- demander l'identifiant du joueur
+- afficher les dommaines de quiz
+- demander le domaine que le joueur veut choisir
+    * Afficher la première question du domaine X choisi
+    * Permettre à l'utilisateur de saisir son choix
+    * Demander à l'utilisateur si il veut saisir encore une autre réponse 
+       * si oui on lui redonne la main de saisir 
+       * si non
+    * On affiche à l'écran deux textes
+       * aller à la question précédente en tapant 0 
+         * on lui donne la main et il tape 0
+       * aller à la question suivante en tapant 1
+         * on lui donne la main et il tape 1
+    * Afficher la question 2 du domaine X maintenant que la personne à taper 1
+    * le joueur saisir son choix pour chacune des question
+    * TANT QUE LES QUESTIONS DU DOMAINE RESTE ON REFAIT LA MEME PROCEDURE
+    * On montre le récaputulatif des questions et réponses du joueur
+    * Demander si il veut Envoyer ses réponses 
+    * Afficher son score avec une mention
+    * Afficher la correction des questions qu'il a perdu
+    * Aficher Parti terminer
+    * Demander si il veut rejouer une aute partie
+    * TANT QU'IL DIT OUI ON RECOMMENCE A PARTI DE DOMAINE QUIZ
 
 ## Analyse
 
-PP --> demander_identifiant_joeur ---> str
-PP --> affiche_domaines_quiz
-PP --> demander_domaine_quiz --> Entier
+PP $\rightarrow$ demander_identifiant_joeur $\rightarrow$ str  
+PP $\rightarrow$ afficher_domaines_quiz  
+PP $\rightarrow$ demander_domaine_quiz $\rightarrow$ Entier  
 
-PP --> Partie1
+PP $\rightarrow$ Partie1  
 
-Partie1 (affiche_questions_domaines) --> Partie2
-Partie2 --> afficher_la_premiere_question
-Partie2 --> demander_sa_reponse
-       --> demander_si il y a une autre réponse à chosir
-          --> si oui
-          --> demander_sa_reponse
-          --> si non
-      --> afficher_la_deuxière_question
-      --> demander_sa_reponse
-      --> demander_si il y a une autre réponse à chosir
-          --> si oui
-          --> demander_sa_reponse
-          --> si non
-     --> Demander_aller_a_la question précédente (0) où suivante(1)
-        --> si oui(1) aller_a_la question suivante
-        --> si non aller à la question précédente
-     --> ......
-     --> afficher_derniere_question
-     --> a la fin 
-     --> demander_question précédente ou Terminer
+Partie1 (afficher_questions_domaines)
+Partie1 $\rightarrow$ afficher_la_premiere_question  
+Partie1 $\rightarrow$ demander_sa_reponse  
+       &emsp; &emsp; &emsp; $\rightarrow$ demander_si il y a une autre réponse à chosir  
+      &emsp; &emsp; &emsp; $\rightarrow$ si oui  
+      &emsp; &emsp; &emsp; $\rightarrow$ demander_sa_reponse  
+      &emsp; &emsp; &emsp; $\rightarrow$ si non  
+      &emsp; &emsp; &emsp; $\rightarrow$ afficher_la_deuxière_question  
+      &emsp; &emsp; &emsp; $\rightarrow$ demander_sa_reponse  
+      &emsp; &emsp; &emsp; $\rightarrow$ demander_si il y a une autre réponse à chosir  
+      &emsp; &emsp; &emsp; $\rightarrow$ si oui  
+      &emsp; &emsp; &emsp; $\rightarrow$ demander_sa_reponse  
+      &emsp; &emsp; &emsp; $\rightarrow$ si non  
+     &emsp; &emsp; &emsp; $\rightarrow$ Demander_aller_a_la question précédente (0) où suivante(1)  
+        &emsp; &emsp; &emsp; $\rightarrow$ si oui(1) aller_a_la question suivante  
+        &emsp; &emsp; &emsp; $\rightarrow$ si non aller à la question précédente  
+     &emsp; &emsp; &emsp; $\rightarrow$ ......  
+     &emsp; &emsp; &emsp; $\rightarrow$ afficher_derniere_question  
+     &emsp; &emsp; &emsp; $\rightarrow$ a la fin   
+     &emsp; &emsp; &emsp; $\rightarrow$ demander_question précédente ou Terminer  
 
-PP--> afficher_recapitulatif
-PP--> donner_score et mention
-PP--> afficher_les_corrections des questions perdues
-PP--> demander quitter ou jouer une recommencer une autre partie
+PP $\rightarrow$ afficher_recapitulatif  
+PP $\rightarrow$ donner_score et mention  
+PP $\rightarrow$ afficher_les_corrections des questions perdues  
+PP $\rightarrow$ demander quitter ou jouer une recommencer une autre partie
 
 

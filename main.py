@@ -1,26 +1,16 @@
 from domaines_quiz import *
-from main_two import *
+from classe_quiz import *
 
 def main():
     identifiant = demander_identifiant()
-    domaine =""
     domaine_index = choisir_domaine(identifiant, domaines_quiz)
-    if domaine_index == 1:
-        domaine = questions_reponses_domaine_culture_geneale
-        correction = correction_culture_generale
-    if domaine_index == 2:
-        domaine = questions_reponses_domaine_maths
-        correction = correction_maths
-    if domaine_index == 3:
-        domaine = questions_reponses_domaine_statistiques
-        correction = correction_stat
-    if domaine_index == 4:
-        domaine = questions_reponses_domaine_programmation_python
-        correction = correction_python
-    quiz = Quiz(domaine, correction, identifiant)
+    questions_reponses=donnees_domaines[domaine_index][0]
+    correction=donnees_domaines[domaine_index][1]
+    quiz = Quiz(questions_reponses, correction, identifiant)
     quiz.lancer_Quiz()
     quiz.recapitulatif()
     quiz.score_quiz()
+    quiz.afficher_correction()
 
 
 if __name__ == "__main__":

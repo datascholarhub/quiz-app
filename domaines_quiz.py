@@ -1,8 +1,3 @@
-"""" 
-Ce fichier comporte les données dont nous avons besoins pour notre projet
-"""
-
-
 domaines_quiz =                             ["Culture générale", "Mathématiques", "Statistiques", "Programmation_Pythpn"]
 
 questions_reponses_domaine_culture_geneale = { "En quelle année Christophe Colombe a découvert l'Amérique ?":
@@ -15,10 +10,10 @@ questions_reponses_domaine_culture_geneale = { "En quelle année Christophe Colo
                                             ["Intelligence of Machine","Test IM", "Test de Turing", "Test de Pascal"],
                                             }
 
-correction_culture_generale =              {"Question1": [4],
-                                            "Question2": [2],
-                                            "Question3": [4],
-                                            "Question4": [3]
+correction_culture_generale =              {"question1": [4],
+                                            "question2": [2],
+                                            "question3": [4],
+                                            "question4": [3]
                                             }
 
 questions_reponses_domaine_maths =    {"Si deux entiers naturels a et b sont premiers entre eux alors":
@@ -31,10 +26,10 @@ questions_reponses_domaine_maths =    {"Si deux entiers naturels a et b sont pre
                                         ["alpha =1", "alpha > 1", "alpha < 1"],
                                       }
 
-correction_maths                  =    {"Question1": [1],
-                                      "Question2": [2],
-                                      "Question3": [3],
-                                      "Question4": [2]
+correction_maths                  =    {"question1": [1],
+                                      "question2": [2],
+                                      "question3": [3],
+                                      "question4": [2]
                                       }
 
 questions_reponses_domaine_statistiques = {
@@ -48,10 +43,10 @@ questions_reponses_domaine_statistiques = {
                                         ["Si p_value=0 alors on accepte l'hypothèse nulle", "si p_value > alpha alors on rejette l'hypothèse nulle", "si p_value < alpha alors on rejette l'hupothèse alternative", "Aucne interprètation n'est juste"]
                                         }
 
-correction_stat =                     {"Question1": [1, 2, 4],
-                                      "Question2": [3, 4],
-                                      "Question3": [3, 4],
-                                      "Question4": [4]
+correction_stat =                     {"question1": [1, 2, 4],
+                                      "question2": [1, 4],
+                                      "question3": [3, 4],
+                                      "question4": [4]
                                       }
 
 questions_reponses_domaine_programmation_python = {
@@ -65,10 +60,10 @@ questions_reponses_domaine_programmation_python = {
                                                   ["class", "New_class", "Class", "Classe"]
                                                   }
 
-correction_python =                               {"Question1": [1],
-                                                  "Question2": [1, 4],
-                                                  "Question3": [1],
-                                                  "Question4": [1]
+correction_python =                               {"question1": [1],
+                                                  "question2": [1, 4],
+                                                  "question3": [1],
+                                                  "question4": [1]
                                                   }
 
 donnees_domaines =                                {
@@ -77,4 +72,4 @@ donnees_domaines =                                {
                                                     3: (questions_reponses_domaine_statistiques, correction_stat),
                                                     4: (questions_reponses_domaine_programmation_python, correction_python)
                                                   }
-    
+
